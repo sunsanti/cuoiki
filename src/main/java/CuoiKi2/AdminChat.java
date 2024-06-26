@@ -288,7 +288,9 @@ protected boolean disButton;
             try {
                 System.out.println("Start getting");
                 ss = new ServerSocket(5000);
+                System.out.println("1");
                 socket = ss.accept();
+                System.out.println("12");
                 in = new DataInputStream(socket.getInputStream());
                 out = new DataOutputStream(socket.getOutputStream());
                 System.out.println("Start While");
@@ -358,6 +360,7 @@ protected boolean disButton;
         //</editor-fold>
 
         /* Create and display the form */
+        
         AdminChat adminChat = new AdminChat();
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

@@ -20,7 +20,7 @@ public class SendEmail {
     
     public void send(String toEmailAdd, String Subject, String Message) {
         SimpleMailMessage smm = new SimpleMailMessage();
-        smm.setFrom("wincute12454@gmail.com");
+        smm.setFrom("duongquan15082015@gmail.com");
         smm.setTo(toEmailAdd);
         smm.setSubject(Subject);
         smm.setText(Message);

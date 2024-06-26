@@ -57,6 +57,11 @@ public class EmployeeChat2 extends javax.swing.JFrame {
         jLabel1.setText("Username");
 
         connectButton.setText("Connect");
+        connectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                connectButtonActionPerformed(evt);
+            }
+        });
 
         disconnectButton.setText("Disconnect");
 
@@ -204,6 +209,10 @@ public class EmployeeChat2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_msgTextAreaActionPerformed
 
+    private void connectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_connectButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_connectButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -239,7 +248,7 @@ public class EmployeeChat2 extends javax.swing.JFrame {
             }
         });
         
-        //CẶC
+        //C
 //        try{
 //            socket = new Socket("192.168.4.90",5000);
 //            in = new DataInputStream(socket.getInputStream());
@@ -257,11 +266,16 @@ public class EmployeeChat2 extends javax.swing.JFrame {
 new Thread(new Runnable() {
         @Override
         public void run() {
+//            String line = "";
+//            System.out.println("get2");
             try {
-                Socket socket = new Socket("10.50.133.52", 5000);
+                String line = "";
+            System.out.println("get2");
+                System.out.println("acasdc");
+                Socket socket = new Socket("192.168.1.213", 5000);
+                System.out.println("1");
                 in = new DataInputStream(socket.getInputStream());
                 out = new DataOutputStream(socket.getOutputStream());
-                String line = "";
                 while (!line.equalsIgnoreCase("end")) {
                     line = in.readUTF();
                     final String finalLine = line;
